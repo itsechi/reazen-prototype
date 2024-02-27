@@ -1,0 +1,29 @@
+.linkIcon {
+  border-radius: 999999px;
+  background-color: white;
+  padding: 0.25rem;
+}
+
+.rightPadding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.25rem 1.2em;
+  padding-right: 5rem;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: #111B47;
+  color: white;
+  width: 100%;
+
+  & img {
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+  }
+}
