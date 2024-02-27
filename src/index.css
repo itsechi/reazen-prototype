@@ -9,6 +9,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,9 +29,4 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, #761213 0%, #1E1E1E 100%);
   color: white;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
