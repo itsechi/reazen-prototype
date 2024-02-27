@@ -1,0 +1,33 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.sectionInfo {
+  & h1 {
+    max-width: 500px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  & p {
+    max-width: 500px;
+  }
+}
+
+.sectionButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.carousel {
+  width: 500px;
+  height: 200px;
+  background-color: white;
+}

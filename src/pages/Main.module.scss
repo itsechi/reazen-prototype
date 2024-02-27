@@ -1,7 +1,13 @@
 .main {
+  min-height: 100vh;
+}
+
+.mainBg {
   background: url("../../public/bg.png");
+  position: absolute;
+  z-index: -1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   mix-blend-mode: multiply;
   background-position: 0px -700px;
   background-repeat: no-repeat;
