@@ -14,7 +14,12 @@ export const Section = (props) => {
   ];
 
   return (
-    <section className={styles.section}>
+    <section
+      className={[
+        props.carousel === "left" ? styles.carouselLeft : '',
+        styles.section,
+      ].join(" ")}
+    >
       <div className={styles.sectionInfo}>
         {props.header && <h1>{props.header}</h1>}
         {props.subheader && <h2>{props.subheader}</h2>}

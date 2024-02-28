@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+.carouselLeft {
+  flex-direction: row-reverse;
+}
+
 .sectionInfo {
   & h1 {
     max-width: 500px;
