@@ -16,7 +16,7 @@ export const Section = (props) => {
   return (
     <section
       className={[
-        props.carousel === "left" ? styles.carouselLeft : '',
+        props.type === "reversed" ? styles.sectionLeft : "",
         styles.section,
       ].join(" ")}
     >
@@ -26,6 +26,7 @@ export const Section = (props) => {
         <p>{props.text}</p>
         <div className={styles.sectionButtons}>{buttons}</div>
       </div>
+      {props.img && <img className={styles.sectionImg} src={props.img} />}
       {props.carousel && <Carousel images={images} />}
     </section>
   );

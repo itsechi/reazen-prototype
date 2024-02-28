@@ -6,7 +6,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.carouselLeft {
+.sectionLeft {
   flex-direction: row-reverse;
 }
 
@@ -28,4 +28,11 @@
   gap: 1rem;
   align-items: center;
   margin-top: 3rem;
+}
+
+.sectionImg {
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 40px;
 }
