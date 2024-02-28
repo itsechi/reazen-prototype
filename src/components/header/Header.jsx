@@ -1,7 +1,7 @@
 import styles from "./Header.module.scss";
-import logo from "../../../public/header.png";
-import shoppingCart from "../../../public/shoppingCart.png";
-import profilePicture from "../../../public/profilePicture.png";
+import logo from "/header.png";
+import shoppingCart from "/shoppingCart.png";
+import profilePicture from "/profilePicture.png";
 import { Button } from "../button/Button";
 import { Link } from "../link/Link";
 

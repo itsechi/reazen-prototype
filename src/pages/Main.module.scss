@@ -3,7 +3,7 @@
 }
 
 .mainBg {
-  background: url("../../public/bg.png");
+  background: url("/bg.png");
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -12,7 +12,8 @@
   background-position: 0px -700px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-width: 2px, 0px, 2px, 0px;
-  border-style: solid;
-  border-color: #000000;
+  box-shadow:
+    inset 0px 11px 8px -10px rgba(66, 68, 90, 1),
+    inset 0px -11px 8px -10px rgba(66, 68, 90, 1);
+
 }

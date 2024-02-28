@@ -1,0 +1,56 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselBtn {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.carouselArrow {
+  cursor: pointer;
+  color: #FFFFFF99;
+  font-size: 3rem;
+}
+
+.carouselImgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+}
+
+.carouselImg {
+  border-radius: 20px;
+  filter: blur(2px);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  width: 300px;
+  height: 450px;
+  object-fit:fill;
+}
+
+.carouselImgLeft {
+  transform: scale(0.8) translateX(35%);
+  width: 300px;
+  height: 450px;
+  object-fit:fill;
+}
+
+.carouselImgRight {
+  transform: scale(0.8) translateX(-35%);
+  width: 300px;
+  height: 450px;
+  object-fit:fill;
+}
+
+.carouselImgCenter {
+  filter: none;
+  box-shadow: 10px 10px 4px 0px #00000040;
+  z-index: 2;
+  width: 300px;
+  height: 450px;
+  object-fit:fill;
+}

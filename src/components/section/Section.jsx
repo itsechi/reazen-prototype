@@ -1,10 +1,17 @@
 import styles from "./Section.module.scss";
 import { Link } from "../link/Link";
+import { Carousel } from "../carousel/Carousel";
 
 export const Section = (props) => {
-  const buttons = props.buttons.map((button) => (
-    <Link className={button.style} href="#" text={button.text} />
+  const buttons = props.buttons.map((button, i) => (
+    <Link key={i} className={button.style} href="#" text={button.text} />
   ));
+
+  const images = [
+    "https://placehold.co/300x450/purple/white/?text=1",
+    "https://placehold.co/300x450/111B47/white/?text=2",
+    "https://placehold.co/300x450?text=3",
+  ];
 
   return (
     <section className={styles.section}>
@@ -14,7 +21,7 @@ export const Section = (props) => {
         <p>{props.text}</p>
         <div className={styles.sectionButtons}>{buttons}</div>
       </div>
-      {props.carousel && <div className={styles.carousel}></div>}
+      {props.carousel && <Carousel images={images} />}
     </section>
   );
 };
