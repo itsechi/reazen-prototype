@@ -25,11 +25,12 @@
 
 .carouselImg {
   border-radius: 20px;
-  filter: blur(2px);
+  filter: blur(4px);
   box-shadow: 0px 4px 4px 0px #00000040;
   width: 300px;
   height: 450px;
   object-fit:fill;
+  cursor: pointer;
 }
 
 .carouselImgLeft {
