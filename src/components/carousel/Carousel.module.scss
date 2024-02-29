@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .carousel {
   display: flex;
   align-items: center;
@@ -14,6 +16,11 @@
   cursor: pointer;
   color: #FFFFFF99;
   font-size: 3rem;
+  transition: color 0.1s;
+
+  &:hover {
+    color: $secondary;
+  }
 }
 
 .carouselImgs {
@@ -25,26 +32,39 @@
 
 .carouselImg {
   border-radius: 20px;
-  filter: blur(4px);
+  filter: blur(2px);
   box-shadow: 0px 4px 4px 0px #00000040;
   width: 300px;
   height: 450px;
-  object-fit:fill;
+  object-fit: fill;
   cursor: pointer;
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .carouselImgLeft {
   transform: scale(0.8) translateX(35%);
   width: 300px;
   height: 450px;
-  object-fit:fill;
+  object-fit: fill;
+
+  &:hover {
+    transform: scale(0.85) translateX(35%) rotate(-2deg);
+  }
 }
 
 .carouselImgRight {
   transform: scale(0.8) translateX(-35%);
   width: 300px;
   height: 450px;
-  object-fit:fill;
+  object-fit: fill;
+
+  &:hover {
+    transform: scale(0.85) translateX(-35%) rotate(2deg);
+  }
 }
 
 .carouselImgCenter {
@@ -53,5 +73,5 @@
   z-index: 2;
   width: 300px;
   height: 450px;
-  object-fit:fill;
+  object-fit: fill;
 }

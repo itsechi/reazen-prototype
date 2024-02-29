@@ -1,6 +1,8 @@
+@import '../../variables';
+
 .linkIcon {
   border-radius: 999999px;
-  background-color: white;
+  background-color: $secondary;
   padding: 0.25rem;
 }
 
@@ -20,11 +22,21 @@
 
 .primary {
   padding: 0.5rem;
-  border: 3px solid #111B47;
+  border: 3px solid $primary;
+
+  &:hover {
+    border: 3px solid $hover;
+  }
 }
 
 .secondary {
   background: none;
-  border: 2px solid white;
+  border: 2px solid $secondary;
   padding: 0.5rem 2rem;
+
+  &:hover {
+    border: 2px solid $tertiary;
+    background: none;
+    color: $tertiary;
+  }
 }
