@@ -1,0 +1,26 @@
+@import '../../variables';
+
+.dropdown {
+  background-color: $primary;
+  z-index: 9999;
+  position: absolute;
+  bottom: -100;
+  left: 0;
+  width: 100%;
+  margin-top: 0.25rem;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdownList {
+  list-style: none;
+  text-align: right;
+}
+
+.dropdownItem {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
