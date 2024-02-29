@@ -17,7 +17,7 @@ export const Main = () => {
 
       <Section
         header="Featured Artists"
-        text={`We proudly showcase the incredible talents and creativity of the individuals who bring magic to our marketplace. Each artist featured here possesses a unique vision, style, and passion for anime and manga artistry. Get ready to explore a world of imagination and inspiration as you discover their captivating creations`}
+        text={`We proudly showcase the incredible talents and creativity of the individuals who bring magic to our marketplace. Each artist featured here possesses a unique vision, style, and passion for anime and manga artistry. Get ready to explore a world of imagination and inspiration as you discover their captivating creations.`}
         carousel
         type="reversed"
         buttons={[
