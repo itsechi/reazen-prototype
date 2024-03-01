@@ -9,6 +9,23 @@ import { Dropdown } from "../dropdown/Dropdown";
 
 export const Header = () => {
   const [dropdown, setDropdown] = React.useState(false);
+  const ref = React.useRef();
+
+  const useOnClickOutside = (ref, handler) => {
+    React.useEffect(() => {
+      const listener = (e) => {
+        if (!ref.current || ref.current.contains(e.target)) return;
+        handler(e);
+      };
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    }, [ref, handler]);
+  };
+  useOnClickOutside(ref, () => setDropdown(false));
 
   return (
     <header className={styles.header}>
@@ -19,7 +36,10 @@ export const Header = () => {
           dropdownStatus={dropdown}
           setDropdown={setDropdown}
         />
-        {dropdown && <Dropdown />}
+        <div ref={ref}>
+          {" "}
+          <Dropdown showDropdown={dropdown} />
+        </div>
       </div>
       <div className={styles.headerTitle}>
         <img src={logo} width="48" height="48"></img>
