@@ -1,18 +1,25 @@
 import React from "react";
 import styles from "./Carousel.module.scss";
+import { motion } from "framer-motion";
+import { variants } from "../../assets/variants";
 
 export const Carousel = (props) => {
   const { images } = props;
+  const [direction, setDirection] = React.useState("left");
   const [activeIndex, setActiveIndex] = React.useState(1);
   const nextSlide = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+    setDirection("left");
+    console.log(direction);
+    setActiveIndex((prevIndex) => {
+      return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
+    });
   };
+
   const prevSlide = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setDirection("right");
+    setActiveIndex((prevIndex) => {
+      return prevIndex === 0 ? images.length - 1 : prevIndex - 1;
+    });
   };
 
   return (
@@ -27,8 +34,8 @@ export const Carousel = (props) => {
         </span>
       </button>
 
-      <div className={styles.carouselImgs}>
-        <img
+      <div className={styles.carouselImgs} key={activeIndex}>
+        <motion.img
           src={
             activeIndex - 1 >= 0
               ? images[activeIndex - 1]
@@ -39,17 +46,24 @@ export const Carousel = (props) => {
           height="450px"
           className={[styles.carouselImg, styles.carouselImgLeft].join(" ")}
           onClick={prevSlide}
+          variants={variants.leftImage}
+          animate={"center"}
+          initial={"left"}
+          whileHover={"hover"}
         />
 
-        <img
+        <motion.img
           src={images[activeIndex]}
           alt={`Slide ${activeIndex}`}
           width="300px"
           height="450px"
           className={[styles.carouselImg, styles.carouselImgCenter].join(" ")}
+          variants={variants.centerImage}
+          animate={"center"}
+          initial={direction === "left" ? "left" : "right"}
+          whileHover={"hover"}
         />
-
-        <img
+        <motion.img
           src={
             activeIndex + 1 < images.length
               ? images[activeIndex + 1]
@@ -60,6 +74,10 @@ export const Carousel = (props) => {
           height="450px"
           className={[styles.carouselImg, styles.carouselImgRight].join(" ")}
           onClick={nextSlide}
+          variants={variants.rightImage}
+          animate={"center"}
+          initial={"right"}
+          whileHover={"hover"}
         />
       </div>
 
